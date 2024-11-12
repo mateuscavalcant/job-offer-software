@@ -1,8 +1,9 @@
 package candidate_login.login.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
 import candidate_login.login.model.LoginModel;
 import candidate_login.login.repository.LoginRepository;
 
@@ -23,6 +24,11 @@ public class LoginService {
         if (user == null) {
             System.out.println("User not found" + email);
             throw new RuntimeException("Invalid credentials");
+        }
+
+        if (email != user.getEmail()) {
+            System.out.println("Invalid email");
+            throw new RuntimeException("Invalid email");
         }
 
         if (!passwordEncoder.matches(password, user.getPassword())) {
