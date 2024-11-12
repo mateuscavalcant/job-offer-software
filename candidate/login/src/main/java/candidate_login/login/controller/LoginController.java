@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import candidate_login.login.jwt.LoginJwt;
 import candidate_login.login.service.LoginService;
 
 
@@ -22,6 +23,8 @@ public class LoginController {
     @Autowired
     private LoginService userService;
 
+    @Autowired
+    private LoginJwt loginJwt;
 
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody Map<String, String> loginData) {
@@ -32,12 +35,12 @@ public class LoginController {
 
         Map<String, String> response = new HashMap<>();
 
+        String token = loginJwt.generateToken(email);
+
         response.put("message", "Login Successful");
+        response.put("token", token);
 
         return ResponseEntity.ok(response);
     }
-
-
-
     
 }
