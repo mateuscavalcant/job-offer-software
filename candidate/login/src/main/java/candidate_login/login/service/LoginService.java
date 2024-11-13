@@ -26,11 +26,6 @@ public class LoginService {
             throw new RuntimeException("Invalid credentials");
         }
 
-        if (email != user.getEmail()) {
-            System.out.println("Invalid email");
-            throw new RuntimeException("Invalid email");
-        }
-
         if (!passwordEncoder.matches(password, user.getPassword())) {
             System.out.println("Failed in encode password");
             throw new RuntimeException("Invalid password");

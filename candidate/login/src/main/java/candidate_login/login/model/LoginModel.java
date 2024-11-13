@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name = "cnadidate_user")
+@Table(name = "user")
 public class LoginModel {
 
     @Id
