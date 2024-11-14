@@ -24,9 +24,6 @@ public class SignupModel {
     @Column(name = "age")
     private int age;
 
-    @Column(name = "cnpj")
-    private String cnpj;
-
     @Column(name = "email")
     private String email;
 
@@ -37,11 +34,10 @@ public class SignupModel {
     public SignupModel() {}
 
 
-    public SignupModel(String name, String lastName, int age, String cnpj, String email, String password) {
+    public SignupModel(String name, String lastName, int age, String email, String password) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-        this.cnpj = cnpj;
         this.email = email;
         this.password = password;
     }
@@ -77,14 +73,6 @@ public class SignupModel {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public String getCNPJ() {
-        return cnpj;
-    }
-
-    public void setCNPJ(String cnpj) {
-        this.cnpj = cnpj;
     }
 
     public String getEmail() {
