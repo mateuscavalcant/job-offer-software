@@ -23,9 +23,9 @@ public class SignupService {
         throw new Exception("Este E-mail já está em uso!");
         }
 
-    String encodedPassword = passwordEncoder.encode(userSignup.getPassword());
-    SignupModel user = new SignupModel(userSignup.getName(), userSignup.getLastName(), userSignup.getAge(), userSignup.getEmail(), encodedPassword);
-    return userRepository.save(user);
+        String encodedPassword = passwordEncoder.encode(userSignup.getPassword());
+        SignupModel user = new SignupModel(userSignup.getName(), userSignup.getLastName(), userSignup.getAge(), userSignup.getEmail(), encodedPassword);
+        return userRepository.save(user);
     }
      
 }
