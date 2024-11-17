@@ -19,7 +19,7 @@ public class SignupEnterpriseModel {
     private Long id;
 
     @Column(name = "nome")
-    private String nome;
+    protected  String nome;
 
     @Column(name = "password")
     private String password;
@@ -28,72 +28,72 @@ public class SignupEnterpriseModel {
     private String cnpj;
 
     @Column(name = "inscricaoEstadual")
-    private String inscricaoEstadual;
+    protected String inscricaoEstadual;
 
     @Column(name = "dataFundacao")
-    private LocalDate dataFundacao;
+    protected LocalDate dataFundacao;
 
     // Endereço
     @Column(name = "endereco")
-    private String endereco;
+    protected String endereco;
 
     @Column(name = "bairro")
-    private String bairro;
+    protected String bairro;
 
     @Column(name = "cidade")
-    private String cidade;
+    protected String cidade;
 
     @Column(name = "estado")
-    private String estado;
+    protected String estado;
 
     @Column(name = "cep")
-    private String cep;
+    protected String cep;
 
     // Contato
     @Column(name = "telefone")
-    private String telefone;
+    protected String telefone;
 
     @Column(name = "email")
     private String email;
 
     @Column(name = "site")
-    private String site;
+    protected String site;
 
     // Dados fiscais
     @Column(name = "regimeTributario")
-    private String regimeTributario;
+    protected String regimeTributario;
 
     @Column(name = "inscricaoMunicipal")
-    private String inscricaoMunicipal;
+    protected String inscricaoMunicipal;
 
     @Column(name = "naturezaJuridica")
-    private String naturezaJuridica;
+    protected String naturezaJuridica;
 
     // Informações adicionais
     @Column(name = "nomeFantasia")
-    private String nomeFantasia;
+    protected String nomeFantasia;
 
     @Column(name = "ramoAtividade")
-    private String ramoAtividade;
+    protected String ramoAtividade;
 
     @Column(name = "capitalSocial")
-    private Double capitalSocial;
+    protected Double capitalSocial;
 
     @Column(name = "quantidadeFuncionarios")
-    private Integer quantidadeFuncionarios;
+    protected Integer quantidadeFuncionarios;
 
     @Column(name = "descricao")
-    private String descricao;
+    protected String descricao;
 
     // Status
     @Column(name = "status")
-    private String status;
+    protected String status;
 
     @Column(name = "dataRegistro")
     private LocalDate dataRegistro;
 
     @Column(name = "ultimaAtualizacao")
-    private LocalDate ultimaAtualizacao;
+    protected LocalDate ultimaAtualizacao;
 
 
     public SignupEnterpriseModel() {}
@@ -102,7 +102,6 @@ public class SignupEnterpriseModel {
     String nome,
     String password,
     String cnpj,
-    String inscricaoEstadual,
     LocalDate dataFundacao,
     String endereco,
     String bairro,
@@ -110,25 +109,12 @@ public class SignupEnterpriseModel {
     String estado,
     String cep,
     String telefone,
-    String email,
-    String site,
-    String regimeTributario,
-    String inscricaoMunicipal,
-    String naturezaJuridica,
-    String nomeFantasia,
-    String ramoAtividade,
-    Double capitalSocial,
-    Integer quantidadeFuncionarios,
-    String descricao,
-    String status,
-    LocalDate dataRegistro,
-    LocalDate ultimaAtualizacao
+    String email
 ) {
     this.id = id;
     this.nome = nome;
     this.password = password;
     this.cnpj = cnpj;
-    this.inscricaoEstadual = inscricaoEstadual;
     this.dataFundacao = dataFundacao;
     this.endereco = endereco;
     this.bairro = bairro;
@@ -137,18 +123,7 @@ public class SignupEnterpriseModel {
     this.cep = cep;
     this.telefone = telefone;
     this.email = email;
-    this.site = site;
-    this.regimeTributario = regimeTributario;
-    this.inscricaoMunicipal = inscricaoMunicipal;
-    this.naturezaJuridica = naturezaJuridica;
-    this.nomeFantasia = nomeFantasia;
-    this.ramoAtividade = ramoAtividade;
-    this.capitalSocial = capitalSocial;
-    this.quantidadeFuncionarios = quantidadeFuncionarios;
-    this.descricao = descricao;
-    this.status = status;
-    this.dataRegistro = dataRegistro;
-    this.ultimaAtualizacao = ultimaAtualizacao;
+
 }
 
 
