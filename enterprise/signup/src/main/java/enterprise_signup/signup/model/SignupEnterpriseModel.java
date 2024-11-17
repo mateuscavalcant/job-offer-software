@@ -21,6 +21,9 @@ public class SignupEnterpriseModel {
     @Column(name = "nome")
     private String nome;
 
+    @Column(name = "password")
+    private String password;
+
     @Column(name = "cnpj")
     private String cnpj;
 
@@ -97,6 +100,7 @@ public class SignupEnterpriseModel {
 
     public SignupEnterpriseModel(Long id,
     String nome,
+    String password,
     String cnpj,
     String inscricaoEstadual,
     LocalDate dataFundacao,
@@ -122,6 +126,7 @@ public class SignupEnterpriseModel {
 ) {
     this.id = id;
     this.nome = nome;
+    this.password = password;
     this.cnpj = cnpj;
     this.inscricaoEstadual = inscricaoEstadual;
     this.dataFundacao = dataFundacao;
@@ -162,6 +167,14 @@ public class SignupEnterpriseModel {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getPassword() {
+        return nome;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getCnpj() {
