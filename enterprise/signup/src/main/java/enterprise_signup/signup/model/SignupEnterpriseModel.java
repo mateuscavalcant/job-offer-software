@@ -2,42 +2,94 @@ package enterprise_signup.signup.model;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "empresa")
 public class SignupEnterpriseModel {
 
     // Atributos básicos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "nome")
     private String nome;
+
+    @Column(name = "cnpj")
     private String cnpj;
+
+    @Column(name = "inscricaoEstadual")
     private String inscricaoEstadual;
+
+    @Column(name = "dataFundacao")
     private LocalDate dataFundacao;
 
     // Endereço
+    @Column(name = "endereco")
     private String endereco;
+
+    @Column(name = "bairro")
     private String bairro;
+
+    @Column(name = "cidade")
     private String cidade;
+
+    @Column(name = "estado")
     private String estado;
+
+    @Column(name = "cep")
     private String cep;
 
     // Contato
+    @Column(name = "telefone")
     private String telefone;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "site")
     private String site;
 
     // Dados fiscais
+    @Column(name = "regimeTributario")
     private String regimeTributario;
+
+    @Column(name = "inscricaoMunicipal")
     private String inscricaoMunicipal;
+
+    @Column(name = "naturezaJuridica")
     private String naturezaJuridica;
 
     // Informações adicionais
+    @Column(name = "nomeFantasia")
     private String nomeFantasia;
+
+    @Column(name = "ramoAtividade")
     private String ramoAtividade;
+
+    @Column(name = "capitalSocial")
     private Double capitalSocial;
+
+    @Column(name = "quantidadeFuncionarios")
     private Integer quantidadeFuncionarios;
+
+    @Column(name = "descricao")
     private String descricao;
 
     // Status
+    @Column(name = "status")
     private String status;
+
+    @Column(name = "dataRegistro")
     private LocalDate dataRegistro;
+
+    @Column(name = "ultimaAtualizacao")
     private LocalDate ultimaAtualizacao;
 
 
