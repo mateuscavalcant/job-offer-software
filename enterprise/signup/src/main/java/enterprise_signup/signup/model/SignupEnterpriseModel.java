@@ -170,7 +170,7 @@ public class SignupEnterpriseModel {
     }
 
     public String getPassword() {
-        return nome;
+        return password;
     }
 
     public void setPassword(String password) {
