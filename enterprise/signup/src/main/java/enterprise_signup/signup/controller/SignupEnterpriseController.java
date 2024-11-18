@@ -35,7 +35,7 @@ public class SignupEnterpriseController {
 
         try {
         enterpriseService.signup(enterpriseSignup);
-        response.put("message", "Usuário registrado com sucesso.");
+        response.put("message", "Cadastro realizado com sucesso.");
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
 
         } catch (Exception e) {

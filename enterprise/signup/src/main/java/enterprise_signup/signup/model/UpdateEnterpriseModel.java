@@ -7,8 +7,8 @@ public class UpdateEnterpriseModel extends SignupEnterpriseModel {
 
     public UpdateEnterpriseModel() {}
 
-    public UpdateEnterpriseModel(String nome,
-    String password,
+    public UpdateEnterpriseModel(Long id,
+    String nome,
     String inscricaoEstadual,
     LocalDate dataFundacao,
     String endereco,
@@ -17,7 +17,6 @@ public class UpdateEnterpriseModel extends SignupEnterpriseModel {
     String estado,
     String cep,
     String telefone,
-    String email,
     String site,
     String regimeTributario,
     String inscricaoMunicipal,
@@ -28,10 +27,9 @@ public class UpdateEnterpriseModel extends SignupEnterpriseModel {
     Integer quantidadeFuncionarios,
     String descricao,
     String status,
-    LocalDate dataRegistro,
     LocalDate ultimaAtualizacao
 ) {
-
+    this.id = id;
     this.nome = nome;
     this.inscricaoEstadual = inscricaoEstadual;
     this.dataFundacao = dataFundacao;

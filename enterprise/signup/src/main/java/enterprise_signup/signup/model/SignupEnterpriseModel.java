@@ -16,7 +16,7 @@ public class SignupEnterpriseModel {
     // Atributos básicos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    protected Long id;
 
     @Column(name = "nome")
     protected  String nome;
@@ -306,6 +306,10 @@ public class SignupEnterpriseModel {
 
     public String getStatus() {
         return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public LocalDate getDataRegistro() {
