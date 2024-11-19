@@ -7,7 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class RegisterCompanyModel {
+public class CompanyModel {
 
     // Atributos básicos
     @Id
@@ -18,10 +18,10 @@ public class RegisterCompanyModel {
     protected  String nome;
 
     @Column(name = "password")
-    private String password;
+    protected String password;
 
     @Column(name = "cnpj")
-    private String cnpj;
+    protected String cnpj;
 
     @Column(name = "inscricaoEstadual")
     protected String inscricaoEstadual;
@@ -50,7 +50,7 @@ public class RegisterCompanyModel {
     protected String telefone;
 
     @Column(name = "email")
-    private String email;
+    protected String email;
 
     @Column(name = "site")
     protected String site;
@@ -86,7 +86,7 @@ public class RegisterCompanyModel {
     protected String status;
 
     @Column(name = "dataRegistro")
-    private LocalDate dataRegistro;
+    protected LocalDate dataRegistro;
 
     @Column(name = "ultimaAtualizacao")
     protected LocalDate ultimaAtualizacao;
