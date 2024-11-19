@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import crud_register.register.model.UpdateCompanyModel;
 
 public interface UpdateCompanyRepository extends JpaRepository<UpdateCompanyModel, Long> {
-    UpdateCompanyModel existById(long id);
+    UpdateCompanyModel findById(long id);
 }
