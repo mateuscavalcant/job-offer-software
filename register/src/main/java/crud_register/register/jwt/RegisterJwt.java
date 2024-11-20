@@ -1,3 +1,14 @@
+package crud_register.register.jwt;
+
+import java.util.Date;
+
+import org.springframework.stereotype.Component;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+
+@Component
 public class RegisterJwt {
     private String secretKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c3VhcmlvX2V4ZW1wbG8iLCJlbWFpbCI6InVzdWFyaW9AZXhlbXBsby5jb20iLCJpYXQiOjE2MjY2NjY2NjYsImV4cCI6MTYyNjY3MDI2Nn0.4fP3x8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8\r\n";
 
