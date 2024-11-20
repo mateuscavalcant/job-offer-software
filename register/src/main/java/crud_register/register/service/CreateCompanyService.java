@@ -2,10 +2,12 @@ package crud_register.register.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import crud_register.register.model.CreateCompanyModel;
 import crud_register.register.repository.CreateCompanyRepository;
 
+@Service
 public class CreateCompanyService {
     private final CreateCompanyRepository companyRepository;
     private final BCryptPasswordEncoder passwordEncoder;
