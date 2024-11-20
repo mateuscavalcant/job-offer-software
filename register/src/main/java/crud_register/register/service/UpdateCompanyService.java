@@ -16,10 +16,14 @@ public class UpdateCompanyService {
         this.updateCompanyRepository = updateCompanyRepository;
     }
 
-    public UpdateCompanyModel update(UpdateCompanyModel companyUpdate) {
+    public UpdateCompanyModel update(UpdateCompanyModel companyUpdate, String emailFromJwt) {
         // Busca a entidade existente no banco de dados
         UpdateCompanyModel existingCompany = updateCompanyRepository.findById(companyUpdate.getId())
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        if (!existingCompany.getEmail().equals(emailFromJwt)) {
+            throw new SecurityException("Usuário não autorizado a atualizar esta conta.");
+        }
 
         // Atualiza os campos do objeto existente
         existingCompany.setNome(companyUpdate.getNome());

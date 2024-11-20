@@ -52,7 +52,7 @@ public class UpdateCompanyController {
         }
 
         try {
-            companyService.update(updateRegister);
+            companyService.update(updateRegister, email);
             response.put("message", "Cadastro atualizado com sucesso.");
             return ResponseEntity.status(HttpStatus.OK).body(response);
         } catch (Exception e) {
