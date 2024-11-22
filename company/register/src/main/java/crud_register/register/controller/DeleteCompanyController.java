@@ -39,7 +39,7 @@ public class DeleteCompanyController {
 
         Map<String, String> response = new HashMap<>();
 
-        // Checar se Authorization header
+        // Checar Authorization header
         if (authorizationHeader == null || !authorizationHeader.startsWith("Bearer ")) {
             response.put("error", "Authorization header is missing or invalid.");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
